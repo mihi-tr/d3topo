@@ -24,8 +24,8 @@ d3.tsv("current-topo.tsv", function(d) {
   width=1024;
   height=768;
   var force = d3.layout.force()
-      .charge(-120)
-      .linkDistance(1)
+      .charge(-50)
+      .linkDistance(5)
       .size([width, height]);
 
    var svg = d3.select("#graph").append("svg")
