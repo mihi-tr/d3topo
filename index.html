@@ -30,7 +30,7 @@ d3.tsv("current-topo.tsv", function(d) {
   width=1024;
   height=768;
   var force = d3.layout.force()
-      .charge(-50)
+      .charge(-40)
       .linkDistance(25)
       .size([width, height]);
 
@@ -58,8 +58,8 @@ d3.tsv("current-topo.tsv", function(d) {
   radius = function(degree) {
     max=_.max(_.values(degree));
     min=1;
-    max_rad=15;
-    min_rad=5;
+    max_rad=10;
+    min_rad=3;
     return function(n) {
       return (((n-min)/(max-min)*(max_rad-min_rad)+min_rad))
       }
